@@ -45,27 +45,6 @@ dev = [
 [tool.setuptools.packages.find]
 where = ["src"]
 
-
-[tool.isort]
-profile = "black"
-known_tests = [
-	"conftest",
-	"helpers"
-]
-sections=[
-	"FUTURE","STDLIB","THIRDPARTY","FIRSTPARTY","LOCALFOLDER"
-]
-multi_line_output = 3
-atomic = "True"
-honor_noqa = "True"
-include_trailing_comma = "True"
-force_grid_wrap = "0"
-use_parentheses = "True"
-ensure_newline_before_comments = "True"
-line_length = "88"
-treat_all_comments_as_code = "True"
-
-
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-rap --junitxml=reports/junit_test_results.xml --cov=src --cov-report=html --cov-report=xml --cov-report=term"
