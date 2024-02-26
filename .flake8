@@ -1,0 +1,8 @@
+[flake8]
+ignore = E203, W503, N818, N801, N803, N806, N815, I202
+max-line-length = 88
+max-complexity = 18
+exclude=data-files,docs,.git,__pycache__,venv
+application_import_names = locust_prometheusdb_listener
+import_order_style = pep8
+application-import-names = locust_prometheusdb_listener, src
