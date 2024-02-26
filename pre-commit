@@ -32,23 +32,5 @@ if [ -n "$files_change_py" ]; then
   exit_on_error $?
 fi
 
-if [ -n "$files_change_py" ]; then
-  echo "Sorting imports with isort..."
-  isort $files_change_py
-  exit_on_error $?
-fi
-
-if [ -n "$files_change_py" ]; then
-  echo "Formatting with black..."
-  black $files_change_py
-  exit_on_error $?
-fi
-
-if [ -n "$files_change_py" ]; then
-  echo "Checking flake8..."
-  flake8 $files_change_py
-  exit_on_error $?
-fi
-
 git add $files_changed
 exit 0
