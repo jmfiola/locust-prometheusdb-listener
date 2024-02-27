@@ -59,6 +59,8 @@ show-fixes = true
 line-length = 88
 
 [tool.ruff.lint]
+
+# Adds Pyflakes, Mccabe, Pydocstyle, etc. run `ruff linter` to see all available linters
 extend-select = ["F", "C90", "I", "N", "D", "ICN"]
 ignore = [ "N801", "N803", "N806", "N815", "N818"]
 
