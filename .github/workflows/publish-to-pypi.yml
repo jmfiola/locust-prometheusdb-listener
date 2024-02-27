@@ -27,7 +27,6 @@ jobs:
         pip install --no-cache-dir bump2version
         git remote add jmfiola https://jmfiola:${{ secrets.PERSONAL_ACCESS_TOKEN}}@github.com/$GITHUB_REPOSITORY
         git pull --no-edit jmfiola $BRANCH
-        # merge done by git pull does not update submodules changed in $BRANCH
         bump2version patch --allow-dirty --tag --commit --commit-args="-a"
         git push --tags jmfiola HEAD:$BRANCH
     - name: Build package
